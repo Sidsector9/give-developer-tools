@@ -1,0 +1,27 @@
+.display-block {
+	display: block !important;
+}
+
+.display-grid {
+	display: grid !important;
+}
+
+.reveal {
+	opacity: 1 !important;
+}
+
+.button-clicked {
+	position: relative;
+	background-color: $grey;
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%,0%);
+		border: 10px solid rgba(0, 0, 0, 0);
+		border-top-color: $grey;
+	}
+}

@@ -1,0 +1,169 @@
+/**
+ * Body
+ */
+body {
+	background-color: $black;
+	padding: 1rem;
+	color: $white;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+
+/**
+ * ## Main title
+ */
+.main-title {
+	margin: 1.5rem 0;
+	text-align: center;
+	font-size: 32px;
+	color: $green;
+
+	& > sup {
+		position: relative;
+		top: -2px;
+		margin-left: 2px;
+		font-weight: 100;
+		font-size: 14px;
+		color: $white;
+	} 
+}
+
+
+/**
+ * ## Section Title
+ */
+.section-title {
+	margin: 0;
+	padding: .35rem 0;
+	border-bottom: 2px solid $green;
+	margin-bottom: 1rem;
+}
+
+
+/**
+ * ## Section wrap
+ */
+.section-wrap {
+	margin-bottom: 1.5rem;
+}
+
+
+/**
+ * ## Button
+ */
+.button {
+	display: block;
+	padding: .5rem .25rem;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $grey;
+	}
+}
+
+
+/**
+ * ## Prefix wrap
+ */
+#prefix-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px solid $grey;
+	border-radius: 2px;
+
+	& > div {
+		display: block;
+		width: 50%;
+		border-right: 1px solid $grey;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+
+/**
+ * ## Subtitle
+ */
+.subtitle {
+	.dash {
+		color: $green;
+	}
+}
+
+
+/**
+ * ## Scope Wrap
+ */
+#subtitle-scopes {
+	display: none;
+}
+
+#scope-wrap {
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	border: 1px solid $grey;
+	border-bottom: none;
+	border-radius: 2px;
+	overflow: hidden;
+
+	& > .scope-wrap__item {
+		border-right: 1px solid $grey;
+		border-bottom: 1px solid $grey;
+		padding: .5rem 1rem;
+		text-align: left;
+
+		&:nth-child(even) {
+			border-right: none;
+		}
+
+		&:last-child {
+			border-right: none;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			text-align: center;
+		}
+	}
+}
+
+
+/**
+ * ## Copy snippet
+ */
+.copy-snippet {
+	position: relative;
+	margin-bottom: .75rem;
+	border: 1px dashed $green;
+	border-radius: 2px;
+	color: $green;
+
+	& > .copied {
+		position: absolute;
+		padding: .25rem .5rem;
+		top: 50%;
+		right: .25rem;
+		transform: translate( 0, -50% );
+		background-color: $green;
+		color: $grey;
+		font-size: 12px;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+
+	&:hover {
+		font-weight: bold;
+	}
+}
+
+.copyable-snippet {
+	position: absolute;
+	left: 999rem;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
